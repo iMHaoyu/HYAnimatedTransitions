@@ -17,13 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor purpleColor];
-    UIView *tempView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 50)];
-    tempView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:tempView];
-    
-    UIView *tempView1 = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height-50, 100, 50)];
-    tempView1.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:tempView1];
     // Do any additional setup after loading the view.
 }
 
