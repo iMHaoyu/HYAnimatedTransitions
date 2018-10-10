@@ -3,4 +3,4 @@
 
 
 
-![1](https://raw.githubusercontent.com/iMHaoyu/HYAnimatedTransitions/master/2018-10-10%207.23.53_53.gif)
+![1](https://raw.githubusercontent.com/iMHaoyu/HYAnimatedTransitions/master/Oct-11-2018%2006-19-52.gif)
