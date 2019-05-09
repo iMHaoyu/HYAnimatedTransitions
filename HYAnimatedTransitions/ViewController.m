@@ -52,18 +52,6 @@
     return _transitionController;
 }
 
-- (UIButton *)tempBtn {
-    if (!_tempBtn) {
-        UIButton *temp = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 50, 50)];
-        temp.backgroundColor = [UIColor whiteColor];
-        temp.layer.cornerRadius = 25;
-        [temp addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:temp];
-        _tempBtn = temp;
-    }
-    return _tempBtn;
-}
-
 - (void)btnClicked:(UIButton *)sender {
     //present
     [self presentNextVC];
@@ -79,7 +67,6 @@
 
 #pragma mark - ⬅️⬅️⬅️⬅️ Present / Dismiss ➡️➡️➡️➡️
 #pragma mark -
-
 - (void)presentNextVC {
     HYSecondVC *tempVC = [[HYSecondVC alloc]init];
     tempVC.transitioningDelegate = self;
@@ -94,11 +81,13 @@
     return self.dismissAnimation;
 }
 
-//- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator {
-//
-//}
+- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator {
+    NSLog(@"1111111");
+    return nil;
+}
 //
 - (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator {
+    NSLog(@"2222222");
     return self.transitionController.interacting ? self.transitionController : nil;
 }
 
@@ -107,5 +96,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - ⬅️⬅️⬅️⬅️ Getter & Setter ➡️➡️➡️➡️
+#pragma mark -
+- (UIButton *)tempBtn {
+    if (!_tempBtn) {
+        UIButton *temp = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 50, 50)];
+        temp.backgroundColor = [UIColor whiteColor];
+        temp.layer.cornerRadius = 25;
+        [temp addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:temp];
+        _tempBtn = temp;
+    }
+    return _tempBtn;
+}
 
 @end
