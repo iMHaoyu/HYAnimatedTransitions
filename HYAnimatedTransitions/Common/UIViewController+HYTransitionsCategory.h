@@ -111,9 +111,4 @@ CG_INLINE HYPresentTransitionsView HYPresentTransitionsViewMake( UIView *fromeVi
 
 @end
 
-@interface UINavigationController (ssss)
-/** 在控制器跳转的时候是否需要手势交互 */
-@property (nonatomic, assign, setter=hy_setNeedGestureInteraction:) BOOL hy_needGestureInteraction;
-@end
-
 NS_ASSUME_NONNULL_END

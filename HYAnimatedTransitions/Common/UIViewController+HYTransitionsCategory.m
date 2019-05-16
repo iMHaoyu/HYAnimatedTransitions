@@ -10,20 +10,6 @@
 #import "HYViewControllerTransitioningDelegate.h"
 #import <objc/runtime.h>
 
-@implementation UINavigationController (ssss)
-
-/** 在控制器跳转的时候是否需要手势交互 */
-- (BOOL)hy_needGestureInteraction {
-    NSNumber *need = objc_getAssociatedObject(self, @selector(hy_needGestureInteraction));
-    return [need boolValue];
-}
-- (void)hy_setNeedGestureInteraction:(BOOL)hy_needGestureInteraction {
-    objc_setAssociatedObject(self, @selector(hy_needGestureInteraction), @(hy_needGestureInteraction), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-@end
-
-
 @implementation UIViewController (HYTransitionsCategory)
 
 #pragma mark - ⬅️⬅️⬅️⬅️ Push & Pop - 导航栏的Push和Pop ➡️➡️➡️➡️
@@ -51,7 +37,6 @@
        presentTransitionsView:(HYPresentTransitionsView (^ _Nullable )(void))presentTransitionsView {
     
     //导航栏跳转代理
-//        self.navigationController.hy_needGestureInteraction = userInteractionEnabled;
     id<UINavigationControllerDelegate> delegate = [HYViewControllerTransitioningDelegate hy_navigationControllerTransitioningManagerWithAnimationType:animationType];
     if (self.navigationController.delegate != delegate) {
         self.navigationController.delegate = delegate;

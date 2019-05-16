@@ -13,6 +13,8 @@
 typedef NS_ENUM(NSInteger,HYTransitionsAnimationType) {
     HYTransitionsAnimationDefaultType       = 0,      //系统默认的类型
     HYTransitionsAnimationPanType           = 1 << 0, //水平滑动类型
+    
+    //// -----------> 只支持模态跳转，不支持导航栏跳转
     HYTransitionsAnimationBackNarrowType    = 1 << 1, //背景抽屉类型,
     HYTransitionsAnimationAmplificationType = 1 << 2, //图片缩放类型，该类型下'modalPresentationStyle' 设置为 'UIModalPresentationCustom'
 };
