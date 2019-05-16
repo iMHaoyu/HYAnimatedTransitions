@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		D2195439216065840041BEEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2195438216065840041BEEB /* AppDelegate.m */; };
-		D219543C216065840041BEEB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D219543B216065840041BEEB /* ViewController.m */; };
 		D219543F216065840041BEEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D219543D216065840041BEEB /* Main.storyboard */; };
 		D2195441216065860041BEEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2195440216065860041BEEB /* Assets.xcassets */; };
 		D2195444216065860041BEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2195442216065860041BEEB /* LaunchScreen.storyboard */; };
 		D2195447216065860041BEEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2195446216065860041BEEB /* main.m */; };
 		D2195451216065860041BEEB /* HYAnimatedTransitionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2195450216065860041BEEB /* HYAnimatedTransitionsTests.m */; };
 		D219545C216065860041BEEB /* HYAnimatedTransitionsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D219545B216065860041BEEB /* HYAnimatedTransitionsUITests.m */; };
-		D2844905216071C700C8DCC3 /* HYSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2844904216071C700C8DCC3 /* HYSecondVC.m */; };
-		D284490E216D873B00C8DCC3 /* HYPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D284490D216D873B00C8DCC3 /* HYPresentAnimation.m */; };
-		D2844911216D874A00C8DCC3 /* HYDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D2844910216D874A00C8DCC3 /* HYDismissAnimation.m */; };
-		D2844917216DD88300C8DCC3 /* HYInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D2844916216DD88300C8DCC3 /* HYInteractiveTransition.m */; };
+		D21E7A39228BF1910005C325 /* HYBackAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E7A38228BF1910005C325 /* HYBackAnimationController.m */; };
+		D21E7A3C228CFEB30005C325 /* HYBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E7A3B228CFEB30005C325 /* HYBackViewController.m */; };
+		D22D2BCA228400CA00AE8795 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2BC7228400CA00AE8795 /* ViewController.m */; };
+		D22D2BE52285129D00AE8795 /* HYBaseNaigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2BE42285129D00AE8795 /* HYBaseNaigationVC.m */; };
+		D22D2BEC2285550000AE8795 /* HYViewControllerTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2BEB2285550000AE8795 /* HYViewControllerTransitioningDelegate.m */; };
+		D22D2BEF2285558100AE8795 /* HYPanAnimatedController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2BEE2285558100AE8795 /* HYPanAnimatedController.m */; };
+		D22D2BF72286A5FA00AE8795 /* HYBaseAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2BF62286A5FA00AE8795 /* HYBaseAnimationController.m */; };
+		D22D2BFD2286D4FB00AE8795 /* HYBaseInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2BFC2286D4FB00AE8795 /* HYBaseInteractionController.m */; };
+		D22D2C012286E33600AE8795 /* UIViewController+HYTransitionsCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C002286E33600AE8795 /* UIViewController+HYTransitionsCategory.m */; };
+		D22D2C0B2286FE7200AE8795 /* HYBackNarrowAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C0A2286FE7200AE8795 /* HYBackNarrowAnimationController.m */; };
+		D22D2C0E2287179B00AE8795 /* HYVerticalSwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C0D2287179B00AE8795 /* HYVerticalSwipeInteractionController.m */; };
+		D22D2C11228906E200AE8795 /* HYAmplificationAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C10228906E200AE8795 /* HYAmplificationAnimationController.m */; };
+		D22D2C14228A5AF500AE8795 /* HYPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C13228A5AF500AE8795 /* HYPanViewController.m */; };
+		D22D2C17228A5BC300AE8795 /* HYBackNarrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C16228A5BC300AE8795 /* HYBackNarrowViewController.m */; };
+		D22D2C1A228A5BD800AE8795 /* HYAmplificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C19228A5BD800AE8795 /* HYAmplificationViewController.m */; };
+		D22D2C1D228A5BF600AE8795 /* HYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C1C228A5BF600AE8795 /* HYBaseViewController.m */; };
+		D2844917216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D2844916216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +54,6 @@
 		D2195434216065840041BEEB /* HYAnimatedTransitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYAnimatedTransitions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2195437216065840041BEEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D2195438216065840041BEEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D219543A216065840041BEEB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D219543B216065840041BEEB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D219543E216065840041BEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2195440216065860041BEEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2195443216065860041BEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,14 +65,41 @@
 		D2195457216065860041BEEB /* HYAnimatedTransitionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYAnimatedTransitionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D219545B216065860041BEEB /* HYAnimatedTransitionsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYAnimatedTransitionsUITests.m; sourceTree = "<group>"; };
 		D219545D216065860041BEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2844903216071C700C8DCC3 /* HYSecondVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYSecondVC.h; sourceTree = "<group>"; };
-		D2844904216071C700C8DCC3 /* HYSecondVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYSecondVC.m; sourceTree = "<group>"; };
-		D284490C216D873B00C8DCC3 /* HYPresentAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPresentAnimation.h; sourceTree = "<group>"; };
-		D284490D216D873B00C8DCC3 /* HYPresentAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYPresentAnimation.m; sourceTree = "<group>"; };
-		D284490F216D874A00C8DCC3 /* HYDismissAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYDismissAnimation.h; sourceTree = "<group>"; };
-		D2844910216D874A00C8DCC3 /* HYDismissAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYDismissAnimation.m; sourceTree = "<group>"; };
-		D2844915216DD88300C8DCC3 /* HYInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYInteractiveTransition.h; sourceTree = "<group>"; };
-		D2844916216DD88300C8DCC3 /* HYInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYInteractiveTransition.m; sourceTree = "<group>"; };
+		D21E7A37228BF1910005C325 /* HYBackAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBackAnimationController.h; sourceTree = "<group>"; };
+		D21E7A38228BF1910005C325 /* HYBackAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBackAnimationController.m; sourceTree = "<group>"; };
+		D21E7A3A228CFEB30005C325 /* HYBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBackViewController.h; sourceTree = "<group>"; };
+		D21E7A3B228CFEB30005C325 /* HYBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBackViewController.m; sourceTree = "<group>"; };
+		D22D2BC7228400CA00AE8795 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D22D2BC9228400CA00AE8795 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D22D2BE32285129D00AE8795 /* HYBaseNaigationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBaseNaigationVC.h; sourceTree = "<group>"; };
+		D22D2BE42285129D00AE8795 /* HYBaseNaigationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBaseNaigationVC.m; sourceTree = "<group>"; };
+		D22D2BEA2285550000AE8795 /* HYViewControllerTransitioningDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYViewControllerTransitioningDelegate.h; sourceTree = "<group>"; };
+		D22D2BEB2285550000AE8795 /* HYViewControllerTransitioningDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYViewControllerTransitioningDelegate.m; sourceTree = "<group>"; };
+		D22D2BED2285558100AE8795 /* HYPanAnimatedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPanAnimatedController.h; sourceTree = "<group>"; };
+		D22D2BEE2285558100AE8795 /* HYPanAnimatedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYPanAnimatedController.m; sourceTree = "<group>"; };
+		D22D2BF52286A5FA00AE8795 /* HYBaseAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBaseAnimationController.h; sourceTree = "<group>"; };
+		D22D2BF62286A5FA00AE8795 /* HYBaseAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBaseAnimationController.m; sourceTree = "<group>"; };
+		D22D2BFB2286D4FB00AE8795 /* HYBaseInteractionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBaseInteractionController.h; sourceTree = "<group>"; };
+		D22D2BFC2286D4FB00AE8795 /* HYBaseInteractionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBaseInteractionController.m; sourceTree = "<group>"; };
+		D22D2BFF2286E33600AE8795 /* UIViewController+HYTransitionsCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HYTransitionsCategory.h"; sourceTree = "<group>"; };
+		D22D2C002286E33600AE8795 /* UIViewController+HYTransitionsCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HYTransitionsCategory.m"; sourceTree = "<group>"; };
+		D22D2C092286FE7200AE8795 /* HYBackNarrowAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBackNarrowAnimationController.h; sourceTree = "<group>"; };
+		D22D2C0A2286FE7200AE8795 /* HYBackNarrowAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBackNarrowAnimationController.m; sourceTree = "<group>"; };
+		D22D2C0C2287179B00AE8795 /* HYVerticalSwipeInteractionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYVerticalSwipeInteractionController.h; sourceTree = "<group>"; };
+		D22D2C0D2287179B00AE8795 /* HYVerticalSwipeInteractionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYVerticalSwipeInteractionController.m; sourceTree = "<group>"; };
+		D22D2C0F228906E200AE8795 /* HYAmplificationAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYAmplificationAnimationController.h; sourceTree = "<group>"; };
+		D22D2C10228906E200AE8795 /* HYAmplificationAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYAmplificationAnimationController.m; sourceTree = "<group>"; };
+		D22D2C12228A5AF500AE8795 /* HYPanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPanViewController.h; sourceTree = "<group>"; };
+		D22D2C13228A5AF500AE8795 /* HYPanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYPanViewController.m; sourceTree = "<group>"; };
+		D22D2C15228A5BC300AE8795 /* HYBackNarrowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBackNarrowViewController.h; sourceTree = "<group>"; };
+		D22D2C16228A5BC300AE8795 /* HYBackNarrowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBackNarrowViewController.m; sourceTree = "<group>"; };
+		D22D2C18228A5BD800AE8795 /* HYAmplificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYAmplificationViewController.h; sourceTree = "<group>"; };
+		D22D2C19228A5BD800AE8795 /* HYAmplificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYAmplificationViewController.m; sourceTree = "<group>"; };
+		D22D2C1B228A5BF600AE8795 /* HYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBaseViewController.h; sourceTree = "<group>"; };
+		D22D2C1C228A5BF600AE8795 /* HYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBaseViewController.m; sourceTree = "<group>"; };
+		D2844915216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYHorizontalSwipeInteractiveTransition.h; sourceTree = "<group>"; };
+		D2844916216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYHorizontalSwipeInteractiveTransition.m; sourceTree = "<group>"; };
+		D289F808228A9EEF00D31382 /* HYTransitionsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYTransitionsHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +150,13 @@
 		D2195436216065840041BEEB /* HYAnimatedTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				D284490B216D871E00C8DCC3 /* HYPresentAndDismissAnimation */,
+				D22D2BFE2286E30800AE8795 /* Common */,
+				D22D2BF32286942E00AE8795 /* AnimationControllers */,
+				D22D2BF42286942E00AE8795 /* InteractionControllers */,
+				D22D2BE62285525D00AE8795 /* TransitioningDelegate */,
+				D22D2BC5228400CA00AE8795 /* Controller */,
 				D2195437216065840041BEEB /* AppDelegate.h */,
 				D2195438216065840041BEEB /* AppDelegate.m */,
-				D219543A216065840041BEEB /* ViewController.h */,
-				D219543B216065840041BEEB /* ViewController.m */,
-				D2844903216071C700C8DCC3 /* HYSecondVC.h */,
-				D2844904216071C700C8DCC3 /* HYSecondVC.m */,
 				D219543D216065840041BEEB /* Main.storyboard */,
 				D2195440216065860041BEEB /* Assets.xcassets */,
 				D2195442216065860041BEEB /* LaunchScreen.storyboard */,
@@ -147,17 +184,106 @@
 			path = HYAnimatedTransitionsUITests;
 			sourceTree = "<group>";
 		};
-		D284490B216D871E00C8DCC3 /* HYPresentAndDismissAnimation */ = {
+		D21E7A35228BEEA40005C325 /* Push&Pop */ = {
 			isa = PBXGroup;
 			children = (
-				D284490C216D873B00C8DCC3 /* HYPresentAnimation.h */,
-				D284490D216D873B00C8DCC3 /* HYPresentAnimation.m */,
-				D284490F216D874A00C8DCC3 /* HYDismissAnimation.h */,
-				D2844910216D874A00C8DCC3 /* HYDismissAnimation.m */,
-				D2844915216DD88300C8DCC3 /* HYInteractiveTransition.h */,
-				D2844916216DD88300C8DCC3 /* HYInteractiveTransition.m */,
+				D21E7A37228BF1910005C325 /* HYBackAnimationController.h */,
+				D21E7A38228BF1910005C325 /* HYBackAnimationController.m */,
 			);
-			path = HYPresentAndDismissAnimation;
+			path = "Push&Pop";
+			sourceTree = "<group>";
+		};
+		D21E7A36228BEEA40005C325 /* Present&Dismiss */ = {
+			isa = PBXGroup;
+			children = (
+				D22D2BED2285558100AE8795 /* HYPanAnimatedController.h */,
+				D22D2BEE2285558100AE8795 /* HYPanAnimatedController.m */,
+				D22D2C092286FE7200AE8795 /* HYBackNarrowAnimationController.h */,
+				D22D2C0A2286FE7200AE8795 /* HYBackNarrowAnimationController.m */,
+				D22D2C0F228906E200AE8795 /* HYAmplificationAnimationController.h */,
+				D22D2C10228906E200AE8795 /* HYAmplificationAnimationController.m */,
+			);
+			path = "Present&Dismiss";
+			sourceTree = "<group>";
+		};
+		D22D2BC5228400CA00AE8795 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D22D2BE32285129D00AE8795 /* HYBaseNaigationVC.h */,
+				D22D2BE42285129D00AE8795 /* HYBaseNaigationVC.m */,
+				D22D2BC9228400CA00AE8795 /* ViewController.h */,
+				D22D2BC7228400CA00AE8795 /* ViewController.m */,
+				D22D2BE022850DC400AE8795 /* Present&Dismiss */,
+				D22D2BDB22850DC400AE8795 /* Push&Pop */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D22D2BDB22850DC400AE8795 /* Push&Pop */ = {
+			isa = PBXGroup;
+			children = (
+				D21E7A3A228CFEB30005C325 /* HYBackViewController.h */,
+				D21E7A3B228CFEB30005C325 /* HYBackViewController.m */,
+			);
+			path = "Push&Pop";
+			sourceTree = "<group>";
+		};
+		D22D2BE022850DC400AE8795 /* Present&Dismiss */ = {
+			isa = PBXGroup;
+			children = (
+				D22D2C1B228A5BF600AE8795 /* HYBaseViewController.h */,
+				D22D2C1C228A5BF600AE8795 /* HYBaseViewController.m */,
+				D22D2C12228A5AF500AE8795 /* HYPanViewController.h */,
+				D22D2C13228A5AF500AE8795 /* HYPanViewController.m */,
+				D22D2C15228A5BC300AE8795 /* HYBackNarrowViewController.h */,
+				D22D2C16228A5BC300AE8795 /* HYBackNarrowViewController.m */,
+				D22D2C18228A5BD800AE8795 /* HYAmplificationViewController.h */,
+				D22D2C19228A5BD800AE8795 /* HYAmplificationViewController.m */,
+			);
+			path = "Present&Dismiss";
+			sourceTree = "<group>";
+		};
+		D22D2BE62285525D00AE8795 /* TransitioningDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D22D2BEA2285550000AE8795 /* HYViewControllerTransitioningDelegate.h */,
+				D22D2BEB2285550000AE8795 /* HYViewControllerTransitioningDelegate.m */,
+			);
+			path = TransitioningDelegate;
+			sourceTree = "<group>";
+		};
+		D22D2BF32286942E00AE8795 /* AnimationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D22D2BF52286A5FA00AE8795 /* HYBaseAnimationController.h */,
+				D22D2BF62286A5FA00AE8795 /* HYBaseAnimationController.m */,
+				D21E7A36228BEEA40005C325 /* Present&Dismiss */,
+				D21E7A35228BEEA40005C325 /* Push&Pop */,
+			);
+			path = AnimationControllers;
+			sourceTree = "<group>";
+		};
+		D22D2BF42286942E00AE8795 /* InteractionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D22D2BFB2286D4FB00AE8795 /* HYBaseInteractionController.h */,
+				D22D2BFC2286D4FB00AE8795 /* HYBaseInteractionController.m */,
+				D2844915216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.h */,
+				D2844916216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m */,
+				D22D2C0C2287179B00AE8795 /* HYVerticalSwipeInteractionController.h */,
+				D22D2C0D2287179B00AE8795 /* HYVerticalSwipeInteractionController.m */,
+			);
+			path = InteractionControllers;
+			sourceTree = "<group>";
+		};
+		D22D2BFE2286E30800AE8795 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D289F808228A9EEF00D31382 /* HYTransitionsHeader.h */,
+				D22D2BFF2286E33600AE8795 /* UIViewController+HYTransitionsCategory.h */,
+				D22D2C002286E33600AE8795 /* UIViewController+HYTransitionsCategory.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,12 +416,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D219543C216065840041BEEB /* ViewController.m in Sources */,
-				D284490E216D873B00C8DCC3 /* HYPresentAnimation.m in Sources */,
-				D2844905216071C700C8DCC3 /* HYSecondVC.m in Sources */,
-				D2844911216D874A00C8DCC3 /* HYDismissAnimation.m in Sources */,
+				D22D2BCA228400CA00AE8795 /* ViewController.m in Sources */,
+				D22D2BF72286A5FA00AE8795 /* HYBaseAnimationController.m in Sources */,
+				D22D2BE52285129D00AE8795 /* HYBaseNaigationVC.m in Sources */,
+				D22D2BEC2285550000AE8795 /* HYViewControllerTransitioningDelegate.m in Sources */,
+				D22D2BEF2285558100AE8795 /* HYPanAnimatedController.m in Sources */,
+				D22D2C1A228A5BD800AE8795 /* HYAmplificationViewController.m in Sources */,
+				D22D2C14228A5AF500AE8795 /* HYPanViewController.m in Sources */,
+				D22D2C11228906E200AE8795 /* HYAmplificationAnimationController.m in Sources */,
 				D2195447216065860041BEEB /* main.m in Sources */,
-				D2844917216DD88300C8DCC3 /* HYInteractiveTransition.m in Sources */,
+				D22D2C0E2287179B00AE8795 /* HYVerticalSwipeInteractionController.m in Sources */,
+				D22D2C0B2286FE7200AE8795 /* HYBackNarrowAnimationController.m in Sources */,
+				D22D2C012286E33600AE8795 /* UIViewController+HYTransitionsCategory.m in Sources */,
+				D21E7A39228BF1910005C325 /* HYBackAnimationController.m in Sources */,
+				D22D2C1D228A5BF600AE8795 /* HYBaseViewController.m in Sources */,
+				D22D2C17228A5BC300AE8795 /* HYBackNarrowViewController.m in Sources */,
+				D2844917216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m in Sources */,
+				D22D2BFD2286D4FB00AE8795 /* HYBaseInteractionController.m in Sources */,
+				D21E7A3C228CFEB30005C325 /* HYBackViewController.m in Sources */,
 				D2195439216065840041BEEB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,7 +606,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53VRM8P8RX;
 				INFOPLIST_FILE = HYAnimatedTransitions/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,7 +624,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53VRM8P8RX;
 				INFOPLIST_FILE = HYAnimatedTransitions/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

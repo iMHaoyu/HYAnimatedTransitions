@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HYBaseNaigationVC.h"
 #import "ViewController.h"
 
 @interface AppDelegate ()
@@ -19,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     ViewController *rootVC = [[ViewController alloc]init];
-    UINavigationController *tempNav = [[UINavigationController alloc]initWithRootViewController:rootVC];
+    HYBaseNaigationVC *tempNav = [[HYBaseNaigationVC alloc]initWithRootViewController:rootVC];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = tempNav;
     [self.window makeKeyAndVisible];
