@@ -150,10 +150,7 @@
 		D2195436216065840041BEEB /* HYAnimatedTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				D22D2BFE2286E30800AE8795 /* Common */,
-				D22D2BF32286942E00AE8795 /* AnimationControllers */,
-				D22D2BF42286942E00AE8795 /* InteractionControllers */,
-				D22D2BE62285525D00AE8795 /* TransitioningDelegate */,
+				D21E7A6C228D7F7E0005C325 /* HYAnimationTransitions */,
 				D22D2BC5228400CA00AE8795 /* Controller */,
 				D2195437216065840041BEEB /* AppDelegate.h */,
 				D2195438216065840041BEEB /* AppDelegate.m */,
@@ -204,6 +201,17 @@
 				D22D2C10228906E200AE8795 /* HYAmplificationAnimationController.m */,
 			);
 			path = "Present&Dismiss";
+			sourceTree = "<group>";
+		};
+		D21E7A6C228D7F7E0005C325 /* HYAnimationTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				D22D2BFE2286E30800AE8795 /* Common */,
+				D22D2BF32286942E00AE8795 /* AnimationControllers */,
+				D22D2BF42286942E00AE8795 /* InteractionControllers */,
+				D22D2BE62285525D00AE8795 /* TransitioningDelegate */,
+			);
+			path = HYAnimationTransitions;
 			sourceTree = "<group>";
 		};
 		D22D2BC5228400CA00AE8795 /* Controller */ = {
