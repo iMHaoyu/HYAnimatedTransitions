@@ -16,6 +16,7 @@
 		D219545C216065860041BEEB /* HYAnimatedTransitionsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D219545B216065860041BEEB /* HYAnimatedTransitionsUITests.m */; };
 		D21E7A39228BF1910005C325 /* HYBackAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E7A38228BF1910005C325 /* HYBackAnimationController.m */; };
 		D21E7A3C228CFEB30005C325 /* HYBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E7A3B228CFEB30005C325 /* HYBackViewController.m */; };
+		D21E7A45228D5AF90005C325 /* UIScrollView+ssss.m in Sources */ = {isa = PBXBuildFile; fileRef = D21E7A44228D5AF80005C325 /* UIScrollView+ssss.m */; };
 		D22D2BCA228400CA00AE8795 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2BC7228400CA00AE8795 /* ViewController.m */; };
 		D22D2BE52285129D00AE8795 /* HYBaseNaigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2BE42285129D00AE8795 /* HYBaseNaigationVC.m */; };
 		D22D2BEC2285550000AE8795 /* HYViewControllerTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2BEB2285550000AE8795 /* HYViewControllerTransitioningDelegate.m */; };
@@ -69,6 +70,8 @@
 		D21E7A38228BF1910005C325 /* HYBackAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBackAnimationController.m; sourceTree = "<group>"; };
 		D21E7A3A228CFEB30005C325 /* HYBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBackViewController.h; sourceTree = "<group>"; };
 		D21E7A3B228CFEB30005C325 /* HYBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBackViewController.m; sourceTree = "<group>"; };
+		D21E7A43228D5AF80005C325 /* UIScrollView+ssss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ssss.h"; sourceTree = "<group>"; };
+		D21E7A44228D5AF80005C325 /* UIScrollView+ssss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ssss.m"; sourceTree = "<group>"; };
 		D22D2BC7228400CA00AE8795 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D22D2BC9228400CA00AE8795 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D22D2BE32285129D00AE8795 /* HYBaseNaigationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBaseNaigationVC.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 			children = (
 				D21E7A3A228CFEB30005C325 /* HYBackViewController.h */,
 				D21E7A3B228CFEB30005C325 /* HYBackViewController.m */,
+				D21E7A43228D5AF80005C325 /* UIScrollView+ssss.h */,
+				D21E7A44228D5AF80005C325 /* UIScrollView+ssss.m */,
 			);
 			path = "Push&Pop";
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 				D22D2C0B2286FE7200AE8795 /* HYBackNarrowAnimationController.m in Sources */,
 				D22D2C012286E33600AE8795 /* UIViewController+HYTransitionsCategory.m in Sources */,
 				D21E7A39228BF1910005C325 /* HYBackAnimationController.m in Sources */,
+				D21E7A45228D5AF90005C325 /* UIScrollView+ssss.m in Sources */,
 				D22D2C1D228A5BF600AE8795 /* HYBaseViewController.m in Sources */,
 				D22D2C17228A5BC300AE8795 /* HYBackNarrowViewController.m in Sources */,
 				D2844917216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m in Sources */,

@@ -10,6 +10,19 @@
 #import "HYViewControllerTransitioningDelegate.h"
 #import <objc/runtime.h>
 
+@implementation UINavigationController (ssss)
+
+/** 在控制器跳转的时候是否需要手势交互 */
+- (BOOL)hy_needGestureInteraction {
+    NSNumber *need = objc_getAssociatedObject(self, @selector(hy_needGestureInteraction));
+    return [need boolValue];
+}
+- (void)hy_setNeedGestureInteraction:(BOOL)hy_needGestureInteraction {
+    objc_setAssociatedObject(self, @selector(hy_needGestureInteraction), @(hy_needGestureInteraction), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+@end
+
 
 @implementation UIViewController (HYTransitionsCategory)
 
@@ -38,12 +51,13 @@
        presentTransitionsView:(HYPresentTransitionsView (^ _Nullable )(void))presentTransitionsView {
     
     //导航栏跳转代理
+//        self.navigationController.hy_needGestureInteraction = userInteractionEnabled;
     id<UINavigationControllerDelegate> delegate = [HYViewControllerTransitioningDelegate hy_navigationControllerTransitioningManagerWithAnimationType:animationType];
     if (self.navigationController.delegate != delegate) {
         self.navigationController.delegate = delegate;
     }
-    //手势交互，这里基本上是退出时的手势交互
-    viewController.hy_needGestureInteraction = userInteractionEnabled;
+    //手势交互，这里基本上是退出时的手势交互,设置任何一个跳转的'userInteractionEnabled'都会会影响到整个导航栏是否会支持手势操作
+    self.navigationController.hy_needGestureInteraction = userInteractionEnabled;
     [self.navigationController pushViewController:viewController animated:YES];
     
     //在图片缩放跳转的情况下才需要传入，其他情况不需要。
@@ -127,3 +141,4 @@
     return objc_getAssociatedObject(self, @selector(hy_needScaledImageOrView));
 }
 @end
+

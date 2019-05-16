@@ -33,7 +33,7 @@ static  NSString *const kHYHorizontalSwipeGestureKey = @"kHYHorizontalSwipeGestu
     if (gesture) {
         [view removeGestureRecognizer:gesture];
     }
-    gesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+    gesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleHorizontalSwipeGesture:)];
     gesture.edges = UIRectEdgeLeft;
     [view addGestureRecognizer:gesture];
     
@@ -46,7 +46,7 @@ static  NSString *const kHYHorizontalSwipeGestureKey = @"kHYHorizontalSwipeGestu
 }
 
 /** 手势处理 */
-- (void)handleGesture:(UIPanGestureRecognizer *)gestureRecognizer {
+- (void)handleHorizontalSwipeGesture:(UIPanGestureRecognizer *)gestureRecognizer {
     CGPoint translatedPoint = [gestureRecognizer translationInView:self.presentedVC.view];
     CGFloat percent = translatedPoint.x /  [[UIScreen mainScreen]bounds].size.width;
     if (percent < 0) {return;}

@@ -7,14 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "UIViewController+HYTransitionsCategory.h"
+
 #import "HYPanViewController.h"
 #import "HYBackNarrowViewController.h"
 #import "HYAmplificationViewController.h"
 
 #import "HYBackViewController.h"
 
-#import "HYViewControllerTransitioningDelegate.h"
-#import "UIViewController+HYTransitionsCategory.h"
 
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>

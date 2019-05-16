@@ -34,7 +34,7 @@ static  NSString *const kHYVerticalSwipeGestureKey = @"kHYVerticalSwipeGestureKe
     if (gesture) {
         [view removeGestureRecognizer:gesture];
     }
-    gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+    gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleVerticalSwipeGesture:)];
     [view addGestureRecognizer:gesture];
     
     //保存本次添加的手势，用来判断手势是否
@@ -42,7 +42,7 @@ static  NSString *const kHYVerticalSwipeGestureKey = @"kHYVerticalSwipeGestureKe
 }
 
 /** 手势处理 */
-- (void)handleGesture:(UIPanGestureRecognizer *)gestureRecognizer {
+- (void)handleVerticalSwipeGesture:(UIPanGestureRecognizer *)gestureRecognizer {
     
     //获取手指在屏幕上滑动的百分比
     CGPoint translation = [gestureRecognizer translationInView:self.presentedVC.view];

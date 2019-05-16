@@ -7,6 +7,8 @@
 //
 
 #import "HYBackViewController.h"
+#import "UIViewController+HYTransitionsCategory.h"
+#import "UIScrollView+ssss.h"
 
 @interface HYBackViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -29,6 +31,11 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 10;
 }
@@ -40,6 +47,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
     cell.textLabel.text = [NSString stringWithFormat:@"Navigation Push Test - Section %ld Row - %ld", (long)indexPath.section,(long)indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HYBackViewController *tempVC = [[HYBackViewController alloc]init];
+    [self hy_pushViewController:tempVC animationType:HYTransitionsAnimationPanType];
+//    [self.navigationController pushViewController:tempVC animated:YES];
 }
 
 #pragma mark - ⬅️⬅️⬅️⬅️ Getter & Setter ➡️➡️➡️➡️

@@ -82,31 +82,30 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
                                             animationControllerForOperation:(UINavigationControllerOperation)operation
                                                          fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC {
-
+    
     //是否需要手势交互,因为push和pop都会触发该方法m，所以只在push的时候做判断(这里注意，push和pop的时候fromVC和ToVC会置换)
-    if (operation == UINavigationControllerOperationPush) {
-        BOOL needGestureInteraction = toVC.hy_needGestureInteraction;
-        self.needGestureInteraction = needGestureInteraction;
-        if (needGestureInteraction) {
-            if (self.transitionsInteractiveType == HYTransitionsInteractiveHorizontalSwipeType) {
-                //水平滑动手势交互
-                [self.horizontalSwipeInteractive hy_wireToViewController:toVC];
-            }else {
-                //垂直滑动手势交互
-                [self.verticalSwipeInteraction hy_wireToViewController:toVC];
-            }
+    BOOL needGestureInteraction = navigationController.hy_needGestureInteraction;
+    if (needGestureInteraction) {
+        if (self.transitionsInteractiveType == HYTransitionsInteractiveHorizontalSwipeType) {
+            //水平滑动手势交互
+            [self.horizontalSwipeInteractive hy_wireToViewController:toVC];
+        }else {
+            //垂直滑动手势交互
+            [self.verticalSwipeInteraction hy_wireToViewController:toVC];
         }
     }
     
     BOOL reverse = (operation == UINavigationControllerOperationPush) ? NO : YES;
     return [self animationControllerWithReverse:reverse isPush:YES];
 }
+
 /** 设置当执行 push／pop 方法时转场的动画效果的 */
 - (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
                                    interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>)animationController {
     
     //判断是否需要手势交互
-    if (self.needGestureInteraction) {
+    BOOL needGestureInteraction = navigationController.hy_needGestureInteraction;
+    if (needGestureInteraction) {
         if (self.transitionsInteractiveType == HYTransitionsInteractiveHorizontalSwipeType) {
             //水平滑动手势交互
             return (self.horizontalSwipeInteractive.interactionInProgress) ? self.horizontalSwipeInteractive : nil;
@@ -118,6 +117,7 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
         return nil;
     }
 }
+
 
 
 
@@ -143,6 +143,7 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
     
     return [self animationControllerWithReverse:NO isPush:NO];
 }
+
 /** 设置当执行Dismiss方法时 进行的转场动画 */
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     
@@ -189,11 +190,13 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
             break;
             
         case HYTransitionsAnimationBackNarrowType://背景抽屉类型
-            animation = [[HYBackNarrowAnimationController alloc] initWithReverse:reverse];
+            if (!isPush)
+                animation = [[HYBackNarrowAnimationController alloc] initWithReverse:reverse];
             break;
             
         case HYTransitionsAnimationAmplificationType://图片缩放类型
-            animation = [[HYAmplificationAnimationController alloc] initWithReverse:reverse];
+            if (!isPush)
+                animation = [[HYAmplificationAnimationController alloc] initWithReverse:reverse];
             break;
             
         default:
