@@ -8,8 +8,6 @@
 
 #import "HYBackViewController.h"
 #import "UIViewController+HYTransitionsCategory.h"
-#import "UIScrollView+ssss.h"
-
 @interface HYBackViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,weak) UITableView *mainTableView;
