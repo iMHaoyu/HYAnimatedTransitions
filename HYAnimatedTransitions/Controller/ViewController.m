@@ -139,16 +139,20 @@
 #pragma mark -
 /** 导航栏菜单按钮点击事件 */
 - (void)leftMenuButtonClicked:(UIBarButtonItem *)sender {
+    //方式一
     HYDrawerViewController *tempVC = [[HYDrawerViewController alloc]init];
-    tempVC.hy_menuSize = CGSizeMake(self.view.frame.size.width-50, self.view.frame.size.height);
     [self hy_presentMenuViewController:tempVC fromLeft:YES menuSize:CGSizeMake(self.view.frame.size.width-50, self.view.frame.size.height)];
+    //方式二
+//    tempVC.hy_menuSize = CGSizeMake(self.view.frame.size.width-50, self.view.frame.size.height);
 //    [self hy_presentViewController:tempVC userInteractionEnabled:YES animationType:HYTransitionsAnimationLeftDrawerType];
 }
 
 - (void)rightMenuButtonClicked:(UIBarButtonItem *)sender {
+    //方式一
     HYDrawerViewController *tempVC = [[HYDrawerViewController alloc]init];
-//    [self hy_presentViewController:tempVC userInteractionEnabled:YES animationType:HYTransitionsAnimationRightDrawerType];
     [self hy_presentMenuViewController:tempVC fromLeft:NO menuSize:CGSizeZero];
+//方式二
+//    [self hy_presentViewController:tempVC userInteractionEnabled:YES animationType:HYTransitionsAnimationRightDrawerType];
 }
 
 
