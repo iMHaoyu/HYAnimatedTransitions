@@ -12,6 +12,7 @@
 #import "HYPanAnimatedController.h"
 #import "HYBackNarrowAnimationController.h"
 #import "HYAmplificationAnimationController.h"
+#import "HYDrawerAnimationController.h"
 
 #import "HYBackAnimationController.h"
 
@@ -39,6 +40,9 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
 @property (nonatomic, assign) HYTransitionsAnimationType transitionsAnimationType;
 /** 视图控制器跳转的手势交互类型 */
 @property (nonatomic, assign) HYTransitionsInteractiveType transitionsInteractiveType;
+
+/** 在弹出控制器是菜单控制器的时候的尺寸。(就是在HYTransitionsAnimationLeftDrawerType和HYTransitionsAnimationRightDrawerType类型下) */
+@property (nonatomic, assign) CGSize menuSize;
 
 @end
 
@@ -74,7 +78,6 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
 }
 
 
-
 #pragma mark - ⬅️⬅️⬅️⬅️ UINavigationControllerDelegate - 导航栏转场过渡代理 ➡️➡️➡️➡️
 #pragma mark -
 /** 设置当执行 侧滑返回时 的转场动画效果 */
@@ -83,7 +86,7 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
                                                          fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC {
     
-    //是否需要手势交互,因为push和pop都会触发该方法m，所以只在push的时候做判断(这里注意，push和pop的时候fromVC和ToVC会置换)
+    //是否需要手势交互,因为push和pop都会触发该方法，所以只在push的时候做判断(这里注意，push和pop的时候fromVC和ToVC会置换)
     BOOL needGestureInteraction = navigationController.hy_needGestureInteraction;
     if (needGestureInteraction) {
         if (self.transitionsInteractiveType == HYTransitionsInteractiveHorizontalSwipeType) {
@@ -131,6 +134,9 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
     //是否需要手势交互
     BOOL needGestureInteraction = presented.hy_needGestureInteraction;
     self.needGestureInteraction = needGestureInteraction;
+    if (self.transitionsAnimationType == HYTransitionsAnimationLeftDrawerType || self.transitionsAnimationType == HYTransitionsAnimationRightDrawerType) {
+        self.menuSize = presented.hy_menuSize;
+    }
     if (needGestureInteraction) {
         if (self.transitionsInteractiveType == HYTransitionsInteractiveHorizontalSwipeType) {
             //水平滑动手势交互
@@ -169,9 +175,6 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
     }
 }
 
-//- (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(nullable UIViewController *)presenting sourceViewController:(UIViewController *)source NS_AVAILABLE_IOS(8_0);
-
-
 
 #pragma mark - ⬅️⬅️⬅️⬅️  Private️ Methods - 私有方法 ➡️➡️➡️
 #pragma mark -
@@ -180,23 +183,41 @@ typedef NS_ENUM(NSInteger,HYTransitionsInteractiveType) {
     //判断动画类型
     HYBaseAnimationController *animation = nil;
     switch (self.transitionsAnimationType) {
-        case HYTransitionsAnimationPanType://水平滑动类型
+            //水平滑动类型
+        case HYTransitionsAnimationPanType:
             if (isPush)
                 animation = [[HYBackAnimationController alloc] initWithReverse:reverse];
             else
                 animation = [[HYPanAnimatedController alloc] initWithReverse:reverse];
             
-            
             break;
             
-        case HYTransitionsAnimationBackNarrowType://背景抽屉类型
+            //背景抽屉类型
+        case HYTransitionsAnimationBackNarrowType:
             if (!isPush)
                 animation = [[HYBackNarrowAnimationController alloc] initWithReverse:reverse];
+            
             break;
             
-        case HYTransitionsAnimationAmplificationType://图片缩放类型
+            //图片缩放类型
+        case HYTransitionsAnimationAmplificationType:
             if (!isPush)
                 animation = [[HYAmplificationAnimationController alloc] initWithReverse:reverse];
+            
+            break;
+            
+            //左侧抽屉
+        case HYTransitionsAnimationLeftDrawerType:
+            if (!isPush)
+                animation = [[HYDrawerAnimationController alloc] initWithReverse:reverse originalLocation:NO toViewSize:self.menuSize];
+            
+            break;
+            
+            //右侧抽屉
+        case HYTransitionsAnimationRightDrawerType:
+            if (!isPush)
+                animation = [[HYDrawerAnimationController alloc] initWithReverse:reverse originalLocation:YES toViewSize:self.menuSize];
+            
             break;
             
         default:

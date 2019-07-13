@@ -7,6 +7,44 @@
 //
 
 #import "HYBaseAnimationController.h"
+#import <objc/runtime.h>
+
+
+#pragma mark - ⬅️⬅️⬅️⬅️ Category ➡️➡️➡️➡️
+#pragma mark -
+@implementation UIView (HYViewAddClickEvent)
+
+/** 添加f点击事件并回调点击事件 */
+- (void)addTapGestureWithClickedCompleteBlock:(void(^)(void))clickedComplete {
+    //回调的点击事件
+    self.clickedCompleteBlock = clickedComplete;
+    
+    //先判断当前是否有交互事件
+    if (![self gestureRecognizers]) {
+        self.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tapGesturRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+        [self addGestureRecognizer:tapGesturRecognizer];
+    }
+}
+
+- (void)tapAction:(id)tap {
+    if (self.clickedCompleteBlock) {
+        self.clickedCompleteBlock();
+    }
+}
+
+#pragma mark - ⬅️⬅️⬅️⬅️ Getter & Setter ➡️➡️➡️➡️
+#pragma mark -
+/** 点击事件 block */
+- (void(^)(void))clickedCompleteBlock {
+    return objc_getAssociatedObject(self, @selector(clickedCompleteBlock));
+}
+- (void)setClickedCompleteBlock:(void (^)(void))clickedCompleteBlock {
+    objc_setAssociatedObject(self, @selector(clickedCompleteBlock), clickedCompleteBlock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+@end
+
+
 
 @implementation HYBaseAnimationController
 

@@ -15,7 +15,7 @@
 #pragma mark - ⬅️⬅️⬅️⬅️ Push & Pop - 导航栏的Push和Pop ➡️➡️➡️➡️
 #pragma mark -
 - (void)hy_pushViewController:(UIViewController *)viewController
-                   animationType:(HYTransitionsAnimationType)animationType {
+                animationType:(HYTransitionsAnimationType)animationType {
     [self hy_pushViewController:viewController
          userInteractionEnabled:YES
                   animationType:animationType
@@ -23,8 +23,8 @@
     
 }
 - (void)hy_pushViewController:(UIViewController *)viewController
-          userInteractionEnabled:(BOOL)userInteractionEnabled
-                   animationType:(HYTransitionsAnimationType)animationType {
+       userInteractionEnabled:(BOOL)userInteractionEnabled
+                animationType:(HYTransitionsAnimationType)animationType {
     [self hy_pushViewController:viewController
          userInteractionEnabled:userInteractionEnabled
                   animationType:animationType
@@ -76,6 +76,22 @@
             presentTransitionsView:nil];
     
 }
+
+/** 显示菜单控制器 */
+- (void)hy_presentMenuViewController:(UIViewController *)viewController fromLeft:(BOOL)formLeft menuSize:(CGSize)menuSize {
+    
+    if (CGSizeEqualToSize(menuSize, CGSizeZero)) {
+        viewController.hy_menuSize = CGSizeMake(200, self.view.frame.size.height);
+    }else {
+        viewController.hy_menuSize = menuSize;
+    }
+    
+    [self hy_presentViewController:viewController
+            userInteractionEnabled:NO
+                     animationType:formLeft?HYTransitionsAnimationLeftDrawerType:HYTransitionsAnimationRightDrawerType
+            presentTransitionsView:nil];
+}
+
 - (void)hy_presentViewController:(UIViewController *)viewController
           userInteractionEnabled:(BOOL)userInteractionEnabled
                    animationType:(HYTransitionsAnimationType)animationType
@@ -124,6 +140,20 @@
 /** 跳转的时候需要缩放的图片。FromVC和ToVC都要实现 */
 - (UIView *)hy_needScaledImageOrView {
     return objc_getAssociatedObject(self, @selector(hy_needScaledImageOrView));
+}
+
+/** 设置显示菜单控制器的尺寸,默认:宽度200，上下间距0 */
+- (CGSize)hy_menuSize {
+    NSString *sizeSetString = objc_getAssociatedObject(self, @selector(hy_menuSize));
+    CGSize size = CGSizeFromString(sizeSetString);
+    if (CGSizeEqualToSize(size, CGSizeZero)) {
+        size = CGSizeMake(200, self.view.frame.size.height);
+    }
+    return size;
+}
+- (void)hy_setMenuSize:(CGSize)hy_menuSize {
+    NSString *sizeSetString = NSStringFromCGSize(hy_menuSize);
+    objc_setAssociatedObject(self, @selector(hy_menuSize), sizeSetString, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 @end
 

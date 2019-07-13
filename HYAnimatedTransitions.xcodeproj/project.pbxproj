@@ -31,6 +31,8 @@
 		D22D2C1A228A5BD800AE8795 /* HYAmplificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C19228A5BD800AE8795 /* HYAmplificationViewController.m */; };
 		D22D2C1D228A5BF600AE8795 /* HYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22D2C1C228A5BF600AE8795 /* HYBaseViewController.m */; };
 		D2844917216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D2844916216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m */; };
+		D2C3B52222DA25720010D368 /* HYDrawerAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3B52122DA25720010D368 /* HYDrawerAnimationController.m */; };
+		D2C3B52522DA5A9B0010D368 /* HYDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C3B52422DA5A9B0010D368 /* HYDrawerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,10 @@
 		D2844915216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYHorizontalSwipeInteractiveTransition.h; sourceTree = "<group>"; };
 		D2844916216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYHorizontalSwipeInteractiveTransition.m; sourceTree = "<group>"; };
 		D289F808228A9EEF00D31382 /* HYTransitionsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYTransitionsHeader.h; sourceTree = "<group>"; };
+		D2C3B52022DA25720010D368 /* HYDrawerAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYDrawerAnimationController.h; sourceTree = "<group>"; };
+		D2C3B52122DA25720010D368 /* HYDrawerAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYDrawerAnimationController.m; sourceTree = "<group>"; };
+		D2C3B52322DA5A9B0010D368 /* HYDrawerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYDrawerViewController.h; sourceTree = "<group>"; };
+		D2C3B52422DA5A9B0010D368 /* HYDrawerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYDrawerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +205,8 @@
 				D22D2C0A2286FE7200AE8795 /* HYBackNarrowAnimationController.m */,
 				D22D2C0F228906E200AE8795 /* HYAmplificationAnimationController.h */,
 				D22D2C10228906E200AE8795 /* HYAmplificationAnimationController.m */,
+				D2C3B52022DA25720010D368 /* HYDrawerAnimationController.h */,
+				D2C3B52122DA25720010D368 /* HYDrawerAnimationController.m */,
 			);
 			path = "Present&Dismiss";
 			sourceTree = "<group>";
@@ -247,6 +255,8 @@
 				D22D2C16228A5BC300AE8795 /* HYBackNarrowViewController.m */,
 				D22D2C18228A5BD800AE8795 /* HYAmplificationViewController.h */,
 				D22D2C19228A5BD800AE8795 /* HYAmplificationViewController.m */,
+				D2C3B52322DA5A9B0010D368 /* HYDrawerViewController.h */,
+				D2C3B52422DA5A9B0010D368 /* HYDrawerViewController.m */,
 			);
 			path = "Present&Dismiss";
 			sourceTree = "<group>";
@@ -435,9 +445,11 @@
 				D2195447216065860041BEEB /* main.m in Sources */,
 				D22D2C0E2287179B00AE8795 /* HYVerticalSwipeInteractionController.m in Sources */,
 				D22D2C0B2286FE7200AE8795 /* HYBackNarrowAnimationController.m in Sources */,
+				D2C3B52522DA5A9B0010D368 /* HYDrawerViewController.m in Sources */,
 				D22D2C012286E33600AE8795 /* UIViewController+HYTransitionsCategory.m in Sources */,
 				D21E7A39228BF1910005C325 /* HYBackAnimationController.m in Sources */,
 				D22D2C1D228A5BF600AE8795 /* HYBaseViewController.m in Sources */,
+				D2C3B52222DA25720010D368 /* HYDrawerAnimationController.m in Sources */,
 				D22D2C17228A5BC300AE8795 /* HYBackNarrowViewController.m in Sources */,
 				D2844917216DD88300C8DCC3 /* HYHorizontalSwipeInteractiveTransition.m in Sources */,
 				D22D2BFD2286D4FB00AE8795 /* HYBaseInteractionController.m in Sources */,

@@ -12,6 +12,7 @@
 #import "HYPanViewController.h"
 #import "HYBackNarrowViewController.h"
 #import "HYAmplificationViewController.h"
+#import "HYDrawerViewController.h"
 
 #import "HYBackViewController.h"
 
@@ -22,7 +23,6 @@
 @property (nonatomic, weak) UITableView *tableView;
 
 @property (nonatomic, copy) NSArray<NSArray *> *dataSource;
-
 
 @end
 
@@ -37,6 +37,14 @@
                           @"图片缩放跳转",],
                         @[@"导航栏跳转测试",]];
     [self tableView];
+    
+    [self setupNavigationButton];
+}
+
+/** 导航栏按钮 */
+- (void)setupNavigationButton {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(leftMenuButtonClicked:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(rightMenuButtonClicked:)];
 }
 
 #pragma mark - ⬅️⬅️⬅️⬅️ TableView Delegate & DataSource ➡️➡️➡️➡️
@@ -125,6 +133,22 @@
                 break;
         }
     }
+}
+
+#pragma mark - ⬅️⬅️⬅️⬅️ Button Actions ➡️➡️➡️➡️
+#pragma mark -
+/** 导航栏菜单按钮点击事件 */
+- (void)leftMenuButtonClicked:(UIBarButtonItem *)sender {
+    HYDrawerViewController *tempVC = [[HYDrawerViewController alloc]init];
+    tempVC.hy_menuSize = CGSizeMake(self.view.frame.size.width-50, self.view.frame.size.height);
+    [self hy_presentMenuViewController:tempVC fromLeft:YES menuSize:CGSizeMake(self.view.frame.size.width-50, self.view.frame.size.height)];
+//    [self hy_presentViewController:tempVC userInteractionEnabled:YES animationType:HYTransitionsAnimationLeftDrawerType];
+}
+
+- (void)rightMenuButtonClicked:(UIBarButtonItem *)sender {
+    HYDrawerViewController *tempVC = [[HYDrawerViewController alloc]init];
+//    [self hy_presentViewController:tempVC userInteractionEnabled:YES animationType:HYTransitionsAnimationRightDrawerType];
+    [self hy_presentMenuViewController:tempVC fromLeft:NO menuSize:CGSizeZero];
 }
 
 

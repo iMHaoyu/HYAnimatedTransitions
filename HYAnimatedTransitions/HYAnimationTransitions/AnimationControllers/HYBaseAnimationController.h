@@ -10,6 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+#pragma mark - ⬅️⬅️⬅️⬅️ View+Category ➡️➡️➡️➡️
+#pragma mark -
+/** 添加view的点击事件 */
+@interface UIView (HYViewAddClickEvent)
+
+@property (nonatomic, strong) void (^clickedCompleteBlock)(void);
+
+- (void)addTapGestureWithClickedCompleteBlock:(void(^)(void))clickedComplete;
+
+@end
+
+
 // 判断是否为刘海屏系列 - 这样写消除了在一些Xcode上的警告 (注意这是代码块的写法)
 #define HY_DEVICE_IS_IPHONE_X \
 ({\
@@ -19,6 +32,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 }\
 (isPhoneX);\
 })
+
+#pragma mark - ⬅️⬅️⬅️⬅️ HYBaseAnimationController ➡️➡️➡️➡️
+#pragma mark -
 
 @interface HYBaseAnimationController : NSObject <UIViewControllerAnimatedTransitioning>
 

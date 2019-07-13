@@ -30,6 +30,8 @@ CG_INLINE HYPresentTransitionsView HYPresentTransitionsViewMake( UIView *fromeVi
 @property (nonatomic, assign, setter=hy_setNeedGestureInteraction:) BOOL hy_needGestureInteraction;
 /** 跳转的时候需要缩放的图片 */
 @property (nonatomic, strong, readonly) UIView *hy_needScaledImageOrView;
+/** 设置显示菜单控制器的尺寸,默认:宽度200，上下间距0。注：只在HYTransitionsAnimationLeftDrawerType和HYTransitionsAnimationRightDrawerType类型下才会有效 */
+@property (nonatomic, assign,setter=hy_setMenuSize:) CGSize hy_menuSize;
 
 #pragma mark - 导航栏的跳转
 /**
@@ -108,6 +110,17 @@ CG_INLINE HYPresentTransitionsView HYPresentTransitionsViewMake( UIView *fromeVi
           userInteractionEnabled:(BOOL)userInteractionEnabled
                    animationType:(HYTransitionsAnimationType)animationType
           presentTransitionsView:(HYPresentTransitionsView (^ _Nullable )(void))presentTransitionsView;
+
+/**
+ 显示菜单控制器
+
+ @param viewController          需要跳转到的视图控制器
+ @param formLeft                视图控制器是否从左侧弹出
+ @param menuSize                视图控制器的寸（默认宽度为200）
+ */
+- (void)hy_presentMenuViewController:(UIViewController *)viewController
+                            fromLeft:(BOOL)formLeft
+                            menuSize:(CGSize)menuSize;
 
 @end
 

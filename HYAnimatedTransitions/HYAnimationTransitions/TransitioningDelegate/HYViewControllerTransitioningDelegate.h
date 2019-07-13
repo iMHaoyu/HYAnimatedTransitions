@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (id<UINavigationControllerDelegate>)hy_navigationControllerTransitioningManagerWithAnimationType:(HYTransitionsAnimationType)animationType;
 + (id<UIViewControllerTransitioningDelegate>)hy_viewControllerTransitioningManagerWithAnimationType:(HYTransitionsAnimationType)animationType;
 
+/** 设置在弹出控制器是菜单控制器的时候的尺寸。(就是在HYTransitionsAnimationLeftDrawerType和HYTransitionsAnimationRightDrawerType类型下) */
++ (void)hy_setupMenuControllerOffset:(CGPoint)offset;
+
 @end
 
 NS_ASSUME_NONNULL_END
