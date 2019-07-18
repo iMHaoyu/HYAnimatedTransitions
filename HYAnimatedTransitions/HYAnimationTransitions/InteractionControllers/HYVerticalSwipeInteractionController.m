@@ -47,9 +47,12 @@ static  NSString *const kHYVerticalSwipeGestureKey = @"kHYVerticalSwipeGestureKe
     //获取手指在屏幕上滑动的百分比
     CGPoint translation = [gestureRecognizer translationInView:self.presentedVC.view];
     CGFloat percent = translation.y /  [[UIScreen mainScreen]bounds].size.height;
-    if (percent < 0) {return;}
-    percent = fabs(percent);
+    if (percent < 0) {
+        [self cancelInteractiveTransition];
+        return;
+    }
     
+    percent = fabs(percent);
     
     switch (gestureRecognizer.state) {
         case UIGestureRecognizerStateBegan: {

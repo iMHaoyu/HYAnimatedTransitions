@@ -141,8 +141,8 @@
 - (void)leftMenuButtonClicked:(UIBarButtonItem *)sender {
     //方式一
     HYDrawerViewController *tempVC = [[HYDrawerViewController alloc]init];
-    [self hy_presentMenuViewController:tempVC fromLeft:YES menuSize:CGSizeMake(self.view.frame.size.width-50, self.view.frame.size.height)];
-    //方式二
+    [self hy_presentMenuViewController:tempVC fromLeft:YES menuSize:CGSizeMake(self.view.frame.size.width-50, self.view.frame.size.height-100)];
+//方式二
 //    tempVC.hy_menuSize = CGSizeMake(self.view.frame.size.width-50, self.view.frame.size.height);
 //    [self hy_presentViewController:tempVC userInteractionEnabled:YES animationType:HYTransitionsAnimationLeftDrawerType];
 }
